@@ -39,7 +39,7 @@
 Clona este repositorio en tu máquina local para comenzar.
 ```
 bash
-git clone [https://github.com/AaronSGomez/Hogwarts](https://github.com/AaronSGomez/Hogwarts)
+git clone [https://github.com/agustinlinares/Hogwarts_FX](https://github.com/agustinlinares/Hogwarts_FX)
  ```
 
 ### Paso 2: Configuración de la Base de Datos
