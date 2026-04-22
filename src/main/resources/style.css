@@ -1,0 +1,172 @@
+/* style.css - Tema "Piedra Oscura, Dorado y Plata (Sublime)" */
+
+.root {
+    -fx-background-image: url("/assets/fondo.png");
+    -fx-background-size: cover;
+    -fx-base: #2c2f33;
+
+    /* Acento general: Dorado (Para focus, selección, etc.) */
+    -fx-accent: #ffd700;
+    -fx-focus-color: #ffd700;
+    -fx-faint-focus-color: transparent;
+
+    /* Fuente: Blanco/Gris claro */
+    -fx-font-family: "Segoe UI", "Garamond", serif;
+    -fx-font-size: 14px;
+}
+
+/* --- TABLA (Alto Contraste) --- */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(79, 84, 92, 0.17);
+    -fx-border-width: 5px;
+    /*-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 1);*/
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+    -fx-padding: 2px;
+}
+
+.table-view .column-header-background > .filler {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px 5px 0px 0px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #aaaaaa; /* Texto de cabecera en PLATA */
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-alignment: center-left;
+}
+
+.table-view .column-header {
+    -fx-alignment: center-left;
+}
+
+.table-row-cell {
+    -fx-background-color: rgba(54, 57, 63, 0.50);
+    -fx-text-fill: #f0f0f0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(48, 52, 58, 0.70);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(64, 59, 48, 0.80);
+    -fx-text-fill: #ffd700; /* TEXTO SELECCIONADO EN DORADO */
+    -fx-border-color: #ffd700; /* Borde de selección en DORADO */
+}
+
+.table-cell {
+    -fx-alignment: center-left;
+    -fx-text-fill: #f0f0f0;
+}
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #ffd700; /* Texto de la celda seleccionada en DORADO */
+}
+
+
+/* --- FORMULARIO Y PANELES --- */
+.label {
+    -fx-text-fill: #ffffff; /* Texto de labels en PLATA */
+    -fx-font-weight: bold;
+}
+
+.text-field, .combo-box, .combo-box .list-cell {
+    -fx-background-color: rgba(54, 57, 63, 0.70);
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #30343a;
+    -fx-border-color: #4f545c;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #ffd700; /* BORDE DE FOCO EN DORADO */
+    -fx-background-color: #3b4047;
+}
+
+.text-field:disabled, .combo-box:disabled {
+    -fx-opacity: 1;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: rgba(48, 52, 58, 0.75);
+}
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #4f545c; /* Gris claro para indicar hover */
+    -fx-text-fill: #ffffff;
+}
+
+/* Separador de contraste */
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-color: #4f545c;
+}
+
+/* --- BOTONES (Estilo Dibujado/Grabado) --- */
+.button {
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20 8 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 1);
+    -fx-font-family: "Garamond", serif;
+    -fx-font-size: 15px;
+}
+
+.button:pressed {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 0, 0, 0.5);
+    -fx-translate-y: 1;
+}
+
+/* GUARDAR -> SLYTHERIN  */
+.btn-success {
+    -fx-background-color: #1a472a;
+    -fx-text-fill: #ddd;
+}
+.btn-success:hover { -fx-background-color: #2a623d; -fx-text-fill: #ffffff; }
+
+/* BORRAR -> GRYFFINDOR  */
+.btn-danger {
+    -fx-background-color: #740001;
+    -fx-text-fill: #ddd;
+}
+.btn-danger:hover { -fx-background-color: #ae0001; -fx-text-fill: #ffffff; }
+
+/* NUEVO -> RAVENCLAW  */
+.btn-info {
+    -fx-background-color: #0e1a40;
+    -fx-text-fill: #ddd;
+}
+
+.btn-info:hover {
+    -fx-background-color: #222f5b;
+    -fx-text-fill: #ffffff;
+}
+
+/* RECARGAR/LIMPIAR -> HUFFLEPUFF  */
+.btn-warning {
+    -fx-background-color: #927530;
+    -fx-text-fill: #ddd;
+}
+.btn-warning:hover {
+    -fx-background-color: #b0914d;
+    -fx-text-fill: #ffffff;
+}
+
+.split-pane, .tab-pane {
+    -fx-background-color: rgba(54, 57, 63, 0.7);
+    -fx-background-radius: 10;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    /* 1. Hacer el fondo completamente transparente */
+    -fx-background-color: transparent;
+    -fx-padding: 0 1px 0 1px;
+    -fx-opacity: 0.0;
+    -fx-arrows-visible: false;
+    -fx-cursor: default;
+}
